@@ -6,6 +6,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -26,17 +27,24 @@ public class BaseClass {
 	{
 		
 		//logger = LogManager.getLogger(this.getClass());
-		
+		/*
 		System.out.println("starts");	
-	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		driver = new ChromeDriver(options);
+*/
+		System.out.println("Executed headless chrome");	
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 	
 	driver.manage().deleteAllCookies();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	driver.get("http://117.247.185.219:122/onepharmacy");
 	driver.manage().window().maximize();	
-	
+	System.out.println("Browser maximized");	
 		
 	}
 	

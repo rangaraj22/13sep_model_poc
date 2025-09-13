@@ -33,8 +33,8 @@ public class LoginPage extends BasePage {
 	 //Action method to send value to user name
 	public void SetUserName(String loginusername)
 	{
+		System.out.println("Reach LoginPage.Java");
 		username.sendKeys(loginusername);
-		
 		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		System.out.println("user name passed");
 		wait = new WebDriverWait(driver,Duration.ofSeconds(30));
@@ -44,7 +44,8 @@ public class LoginPage extends BasePage {
 	public void setPassword(String loginpassword)
 	{
 		password.sendKeys(loginpassword);
-		password.submit();
+		//password.submit();
+		System.out.println("pwd name passed");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 	}
 	
@@ -52,6 +53,7 @@ public class LoginPage extends BasePage {
 	public void ClickOnLoginButton()
 	{
 		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+		System.out.println("Going to click login button");
 		loginbutton.click();
 		
 		//   WebElement changePasswordDialog = wait.until(

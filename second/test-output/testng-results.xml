@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-13T12:34:37 IST" name="Default suite" finished-at="2025-09-13T12:35:04 IST" duration-ms="27073">
+  <suite started-at="2025-09-13T20:15:09 IST" name="Default suite" finished-at="2025-09-13T20:15:42 IST" duration-ms="33454">
     <groups>
     </groups>
-    <test started-at="2025-09-13T12:34:37 IST" name="Default test" finished-at="2025-09-13T12:35:04 IST" duration-ms="27073">
+    <test started-at="2025-09-13T20:15:09 IST" name="Default test" finished-at="2025-09-13T20:15:42 IST" duration-ms="33454">
       <class name="testCase.TC_001_LoginPage">
-        <test-method signature="setup()[pri:0, instance:testCase.TC_001_LoginPage@17497425]" started-at="2025-09-13T12:34:37 IST" name="setup" finished-at="2025-09-13T12:34:54 IST" duration-ms="17709" status="PASS">
+        <test-method signature="setup()[pri:0, instance:testCase.TC_001_LoginPage@17497425]" started-at="2025-09-13T20:15:09 IST" name="setup" finished-at="2025-09-13T20:15:33 IST" duration-ms="23923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test_login_application()[pri:0, instance:testCase.TC_001_LoginPage@17497425]" started-at="2025-09-13T12:34:54 IST" name="test_login_application" finished-at="2025-09-13T12:35:04 IST" duration-ms="9306" status="PASS">
+        <test-method signature="test_login_application()[pri:0, instance:testCase.TC_001_LoginPage@17497425]" started-at="2025-09-13T20:15:33 IST" name="test_login_application" finished-at="2025-09-13T20:15:42 IST" duration-ms="9459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_login_application -->
