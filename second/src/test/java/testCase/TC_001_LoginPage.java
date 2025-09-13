@@ -14,7 +14,7 @@ public class TC_001_LoginPage extends BaseClass {
 			
 		LoginPage lpage = new LoginPage(driver);
 		
-		
+		System.out.println("Test commit");
 		lpage.SetUserName("raj");
 		Thread.sleep(8000);
 		lpage.setPassword("123");
