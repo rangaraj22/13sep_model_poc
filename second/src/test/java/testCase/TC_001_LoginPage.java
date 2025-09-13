@@ -16,7 +16,6 @@ public class TC_001_LoginPage extends BaseClass {
 		
 		
 		lpage.SetUserName("raj");
-		
 		Thread.sleep(8000);
 		lpage.setPassword("123");
 	//	Thread.sleep(8000);
