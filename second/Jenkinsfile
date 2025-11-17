@@ -18,14 +18,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Maven project.....'
-                sh 'mvn clean install -DskipTests'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
         stage('TestNG Tests') {
             steps {
                 echo 'Running TestNG tests...'
-                sh 'mvn test'
+                bat 'mvn test'
             }
             post {
                 always {
