@@ -19,6 +19,10 @@
           <version>3.14.0</version>
           <configuration>
             <!-- put your configurations here -->
+          <suiteXmlFiles>
+		          	      		 <suiteXmlFile>testng.xml</suiteXmlFile>
+		  </suiteXmlFiles>
+       
           </configuration>
         </plugin>
         
