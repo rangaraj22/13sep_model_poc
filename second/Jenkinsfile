@@ -17,8 +17,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Running Maven clean install...'
-                bat 'mvn clean install -DskipTests'
+               echo 'Running Maven build inside /second folder...'
+                dir('second') {     // <-- IMPORTANT FIX
+                    bat 'mvn clean install -DskipTests'
+                    }
             }
         }
     }
