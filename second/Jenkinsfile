@@ -1,10 +1,34 @@
 pipeline {
     agent any
+
+    tools {
+        maven 'Maven-3.9.11'     // Configure this name in Jenkins → Global Tool Configuration
+        jdk 'jdk17'           // Configure JDK name in Jenkins
+    }
+
     stages {
+
+        stage('Checkout') {
+            steps {
+                echo 'Checking out project from GitHub...'
+                checkout scm
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Hello from Jenkins!'
+                echo 'Running Maven clean install...'
+                bat 'mvn clean install -DskipTests'
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build completed successfully!'
+        }
+        failure {
+            echo 'Build failed!'
         }
     }
 }
