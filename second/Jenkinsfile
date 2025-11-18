@@ -1,56 +1,10 @@
 pipeline {
     agent any
-
-    tools {
-        maven 'Maven-3.9.11'        // Configure this name in Jenkins → Global Tool Configuration
-        jdk 'jdk17'              // Configure JDK name in Jenkins
-    }
-
     stages {
-
-        stage('Checkout') {
-            steps {
-                echo 'Fetching code from GitHub...'
-                checkout scm
-            }
-        }
-
         stage('Build') {
             steps {
-                echo 'Building Maven project.....'
-                bat 'mvn clean install -DskipTests'
+                echo 'Hello from Jenkins!'
             }
-        }
-
-        stage('TestNG Tests') {
-            steps {
-                echo 'Running TestNG tests...'
-                bat 'mvn test'
-            }
-            post {
-                always {
-                    junit '**/target/surefire-reports/*.xml'
-                }
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-                // Add your deploy commands here
-                // Example:
-                // sh 'scp target/myapp.jar user@server:/opt/app/'
-                // sh 'ssh user@server "systemctl restart myapp"'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-        failure {
-            echo 'Pipeline failed!'
         }
     }
 }
