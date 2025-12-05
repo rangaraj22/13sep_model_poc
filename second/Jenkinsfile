@@ -28,6 +28,7 @@ pipeline {
     post {
         success {
             echo 'Build completed successfully!'
+             archiveArtifacts artifacts: 'second/target/**/*', fingerprint: true
         }
         failure {
             echo 'Build failed!'
