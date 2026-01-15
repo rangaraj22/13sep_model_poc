@@ -19,6 +19,7 @@ public class TC_001_LoginPage extends BaseClass {
 		Thread.sleep(8000);
 		lpage.setPassword("123");
 	//	Thread.sleep(8000);
+//		Thread.sleep(8000);
 		lpage.ClickOnLoginButton();
 		//Thread.sleep(8000);
 		//lpage.locationselection();

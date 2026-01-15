@@ -35,7 +35,7 @@ public class BaseClass {
 		options.addArguments("--disable-dev-shm-usage");
 		driver = new ChromeDriver(options);
 */
-		System.out.println("Executed headless chrome");	
+		System.out.println("Executed Non headless chrome");	
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 	
